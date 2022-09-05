@@ -1,4 +1,10 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+} from '@angular/core';
+import { ControlContainer, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,9 +13,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent implements OnInit {
-  value = 'Clear me';
+  @Input() label: string = '';
+  @Input() controlName: string = '';
 
-  constructor() {}
+  constructor(private cc: ControlContainer) {}
 
   ngOnInit(): void {}
+
+  get control(): FormControl {
+    return this.cc.control?.get(this.controlName) as FormControl;
+  }
 }

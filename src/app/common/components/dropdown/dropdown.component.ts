@@ -1,4 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+} from '@angular/core';
+import { ControlContainer, FormControl } from '@angular/forms';
+import { Options } from '../../interfaces/options.interface';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,13 +14,15 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DropdownComponent implements OnInit {
-  foods = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' },
-  ];
+  @Input() options: Options[] = [];
+  @Input() label: string = '';
+  @Input() controlName: string = '';
 
-  constructor() {}
+  constructor(private cc: ControlContainer) {}
 
   ngOnInit(): void {}
+
+  get control(): FormControl {
+    return this.cc.control?.get(this.controlName) as FormControl;
+  }
 }

@@ -1,13 +1,9 @@
-<label id="example-radio-group-label">Pick your favorite season</label>
+<label id="example-radio-group-label">{{ label }}</label>
 <mat-radio-group
   aria-labelledby="example-radio-group-label"
   class="example-radio-group"
 >
-  <mat-radio-button
-    class="example-radio-button"
-    *ngFor="let season of seasons"
-    [value]="season"
-  >
-    {{ season }}
+  <mat-radio-button class="example-radio-button" *ngFor="let option of options">
+    {{ option.view }}
   </mat-radio-button>
 </mat-radio-group>
