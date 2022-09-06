@@ -3,7 +3,11 @@
   aria-labelledby="example-radio-group-label"
   class="example-radio-group"
 >
-  <mat-radio-button class="example-radio-button" *ngFor="let option of options">
+  <mat-radio-button
+    class="example-radio-button"
+    [formControl]="control"
+    *ngFor="let option of options"
+  >
     {{ option.view }}
   </mat-radio-button>
 </mat-radio-group>
