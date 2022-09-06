@@ -24,6 +24,17 @@ export class UserComponent {
     },
   ];
 
+  marriedOptions: Options[] = [
+    {
+      view: 'კი',
+      value: 1,
+    },
+    {
+      view: 'არა',
+      value: 0,
+    },
+  ];
+
   nationOptions: Options[] = [
     {
       view: 'ქართველი',
@@ -39,12 +50,16 @@ export class UserComponent {
     name: new FormControl(),
     surname: new FormControl(),
     sex: new FormControl(),
+    married: new FormControl(),
     nation: new FormControl(),
   });
 
   controls = new Controls([
     [new TextControl('name', 'სახელი'), new TextControl('surname', 'გვარი')],
-    [new RadioControl('sex', 'სქესი', this.sexOptions)],
+    [
+      new RadioControl('sex', 'სქესი', this.sexOptions),
+      new RadioControl('married', 'დაოჯახებული', this.marriedOptions),
+    ],
     [new DropdownControl('nation', 'ეროვნება', this.nationOptions)],
   ]);
 
