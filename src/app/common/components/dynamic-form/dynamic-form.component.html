@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+  <div class="row" *ngFor="let rowControls of asArray(controls)">
+    <div class="input" *ngFor="let control of rowControls">
+      <container-element [ngSwitch]="control.type">
+        <app-input
+          *ngSwitchCase="CONTROL.Text"
+          [label]="asString(control.label)"
+          [controlName]="control.controlName"
+        ></app-input>
+        <app-dropdown
+          *ngSwitchCase="CONTROL.Dropdown"
+          [label]="asString(control.label)"
+          [controlName]="control.controlName"
+          [options]="control.options"
+        ></app-dropdown>
+        <app-radio
+          *ngSwitchCase="CONTROL.Radio"
+          [label]="control.label"
+          [controlName]="control.controlName"
+          [options]="control.options"
+        ></app-radio>
+      </container-element>
+    </div>
+  </div>
+</form>

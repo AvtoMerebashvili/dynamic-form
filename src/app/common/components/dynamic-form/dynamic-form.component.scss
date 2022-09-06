@@ -1,0 +1,15 @@
+form {
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 52px;
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+    .input {
+      width: 100%;
+    }
+  }
+}
