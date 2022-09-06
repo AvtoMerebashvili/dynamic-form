@@ -4,7 +4,11 @@
   class="example-radio-group"
   [formControl]="control"
 >
-  <mat-radio-button class="example-radio-button" *ngFor="let option of options">
+  <mat-radio-button
+    class="example-radio-button"
+    [value]="option.value"
+    *ngFor="let option of options"
+  >
     {{ option.view }}
   </mat-radio-button>
 </mat-radio-group>

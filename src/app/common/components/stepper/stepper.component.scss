@@ -9,6 +9,7 @@
     border-radius: 11px;
     p {
       margin: 0;
+      color: #545454;
     }
     &:hover {
       cursor: pointer;
@@ -16,5 +17,6 @@
   }
   .active {
     border-color: #b0f5b0;
+    background-color: #b0f5b0;
   }
 }

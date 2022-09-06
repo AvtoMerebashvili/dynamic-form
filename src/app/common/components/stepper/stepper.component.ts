@@ -1,7 +1,5 @@
 import {
   Component,
-  OnInit,
-  OnChanges,
   ChangeDetectionStrategy,
   Input,
   Output,
@@ -16,15 +14,11 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./stepper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StepperComponent implements OnInit, OnChanges {
+export class StepperComponent {
   @Input() steps$: Observable<Step[]> = of([]);
   @Output() stepChanged = new EventEmitter();
 
   constructor() {}
-
-  ngOnInit(): void {}
-
-  ngOnChanges() {}
 
   onStepClick(routerLink: string) {
     this.stepChanged.emit(routerLink);

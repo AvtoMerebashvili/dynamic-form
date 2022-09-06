@@ -4,7 +4,7 @@ import { BaseOptionableControl } from './base-optionable.model';
 
 export class RadioControl extends BaseOptionableControl {
   label: string;
-  constructor(label: string, options: Options[], controlName: string) {
+  constructor(controlName: string, label: string, options: Options[]) {
     super(options, controlName, CONTROL.Radio);
     this.label = label;
   }

@@ -49,7 +49,7 @@ export class WizardComponent implements OnInit {
         })
         .filter((step: Step) => step.routerLink !== url[2])
         .concat(currentStep)
-        .sort((a, b) => b.id - a.id);
+        .sort((a, b) => a.id - b.id);
     } else {
       return steps
         .map((step: Step) => {
@@ -59,7 +59,7 @@ export class WizardComponent implements OnInit {
           };
         })
         .filter((step: Step) => step.routerLink !== url[2])
-        .sort((a, b) => b.id - a.id);
+        .sort((a, b) => a.id - b.id);
     }
   }
 
