@@ -12,13 +12,11 @@ import { ControlContainer, FormControl } from '@angular/forms';
   styleUrls: ['./input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InputComponent implements OnInit {
+export class InputComponent {
   @Input() label: string = '';
   @Input() controlName: string = '';
 
   constructor(private cc: ControlContainer) {}
-
-  ngOnInit(): void {}
 
   get control(): FormControl {
     return this.cc.control?.get(this.controlName) as FormControl;

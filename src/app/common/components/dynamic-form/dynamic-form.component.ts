@@ -14,15 +14,13 @@ import { Controls } from '../../models/form-components/controls.model';
   styleUrls: ['./dynamic-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DynamicFormComponent implements OnInit {
+export class DynamicFormComponent {
   @Input() form: FormGroup = new FormGroup({});
   @Input() controls: Controls = [];
 
   CONTROL = CONTROL;
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   asString(item: any) {
     return item as string;

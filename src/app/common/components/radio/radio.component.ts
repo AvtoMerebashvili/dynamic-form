@@ -13,14 +13,12 @@ import { Options } from '../../interfaces/options.interface';
   styleUrls: ['./radio.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RadioComponent implements OnInit {
+export class RadioComponent {
   @Input() options: Options[] = [];
   @Input() label: string = '';
   @Input() controlName: string = '';
 
   constructor(private cc: ControlContainer) {}
-
-  ngOnInit(): void {}
 
   get control(): FormControl {
     return this.cc.control?.get(this.controlName) as FormControl;
