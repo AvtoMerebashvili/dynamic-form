@@ -1,0 +1,10 @@
+<div class="component">
+  <div
+    class="step"
+    *ngFor="let step of steps$ | async"
+    (click)="onStepClick(step.routerLink)"
+    [ngClass]="{ active: step.active }"
+  >
+    <p>{{ step.label }}</p>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.component {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .step {
+    padding: 10px 30px;
+    border: 2px solid #999999;
+    border-radius: 11px;
+    p {
+      margin: 0;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .active {
+    border-color: #b0f5b0;
+  }
+}
