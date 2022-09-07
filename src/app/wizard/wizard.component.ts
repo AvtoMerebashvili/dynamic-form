@@ -51,15 +51,8 @@ export class WizardComponent implements OnInit {
         .concat(currentStep)
         .sort((a, b) => a.id - b.id);
     } else {
-      return steps
-        .map((step: Step) => {
-          return {
-            ...step,
-            active: false,
-          };
-        })
-        .filter((step: Step) => step.routerLink !== url[2])
-        .sort((a, b) => a.id - b.id);
+      this.router.navigate(['user'], { relativeTo: this.route });
+      return [];
     }
   }
 
