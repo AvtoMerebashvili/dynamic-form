@@ -7,6 +7,7 @@ import { UserComponent } from './components/user/user.component';
 import { CarComponent } from './components/car/car.component';
 import { AddressComponent } from './components/address/address.component';
 import { ComponentsModule } from '../common/components/components.module';
+import { NgxsFormPluginModule } from '@ngxs/form-plugin';
 
 @NgModule({
   declarations: [

@@ -78,6 +78,8 @@ export class AddressComponent implements OnInit {
     [new TextControl('address2', 'მისამართი 2')],
   ]);
 
+  ngxsForm = 'address';
+
   constructor() {}
 
   ngOnInit(): void {}

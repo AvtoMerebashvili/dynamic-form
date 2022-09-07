@@ -74,5 +74,7 @@ export class CarComponent {
     [new DropdownControl('doors', 'კარების რაოდენობა', this.doors)],
   ]);
 
+  ngxsForm = 'car';
+
   constructor() {}
 }

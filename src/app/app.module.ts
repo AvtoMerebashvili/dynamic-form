@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { NgxsFormPluginModule } from '@ngxs/form-plugin';
+import { NgxsModule } from '@ngxs/store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +15,8 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
+    NgxsModule.forRoot([]),
+    NgxsFormPluginModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

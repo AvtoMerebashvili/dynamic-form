@@ -17,6 +17,7 @@ import { Controls } from '../../models/form-components/controls.model';
 export class DynamicFormComponent {
   @Input() form: FormGroup = new FormGroup({});
   @Input() controls: Controls = [];
+  @Input() ngxsForm: any;
 
   CONTROL = CONTROL;
 

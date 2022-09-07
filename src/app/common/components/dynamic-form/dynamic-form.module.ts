@@ -5,6 +5,7 @@ import { DropdownModule } from '../dropdown/dropdown.module';
 import { InputModule } from '../input/input.module';
 import { RadioModule } from '../radio/radio.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxsFormPluginModule } from '@ngxs/form-plugin';
 
 @NgModule({
   declarations: [DynamicFormComponent],
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     InputModule,
     RadioModule,
     ReactiveFormsModule,
+    NgxsFormPluginModule,
   ],
   exports: [DynamicFormComponent],
 })

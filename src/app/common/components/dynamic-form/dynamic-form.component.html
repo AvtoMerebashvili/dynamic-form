@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" [ngxsForm]="ngxsForm">
   <div class="row" *ngFor="let rowControls of asArray(controls)">
     <div class="input" *ngFor="let control of rowControls">
       <container-element [ngSwitch]="control.type">

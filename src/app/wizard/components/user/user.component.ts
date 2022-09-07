@@ -63,5 +63,7 @@ export class UserComponent {
     [new DropdownControl('nation', 'ეროვნება', this.nationOptions)],
   ]);
 
+  ngxsForm = 'user';
+
   constructor() {}
 }
